@@ -4,9 +4,11 @@ import os
 import numpy as np
 import pandas as pd
 from PIL import Image
+
+
 import plotly.graph_objects as go
 from streamlit_option_menu import option_menu
-from gtspython import tonGrad
+#from gtspython import tonGrad
 st.set_page_config(layout="wide")
 default_directory_path = r"C:\Users\AAlmgren\Documents\Projects\Drilling Compliance\csv"
 directory_path = st.text_input("Type folder:", default_directory_path)
