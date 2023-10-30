@@ -29,8 +29,8 @@ with st.sidebar:
     selected_year = st.sidebar.selectbox("Year:", years, index=1)
     material = st.radio("Evaluate by: ", ['Tonnes', 'Metal'])
     
-    string = default_directory_path+"\\"+selected_mine+"_ton_"+selected_year+".csv"
-    stringcomp = default_directory_path+"\\"+selected_mine+"_comp_"+selected_year+".csv"
+    string = default_directory_path+selected_mine+"_ton_"+selected_year+".csv"
+    stringcomp = default_directory_path+selected_mine+"_comp_"+selected_year+".csv"
     csv_file_path = string
     comp_file_path = stringcomp
     df0 = pd.read_csv(csv_file_path)
