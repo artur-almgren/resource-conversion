@@ -6,7 +6,7 @@ import pandas as pd
 from PIL import Image
 
 
-from streamlit_option_menu import option_menu
+#from streamlit_option_menu import option_menu
 
 #from gtspython import tonGrad
 st.set_page_config(layout="wide")
