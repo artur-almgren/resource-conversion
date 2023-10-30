@@ -35,6 +35,7 @@ with st.sidebar:
     comp_file_path = stringcomp
     df0 = pd.read_csv(csv_file_path)
     df = df0[(df0['TYPE'] == 'DRE')]
+    df['index'] = df['index'].astype(float)
     df_rescat = df0[(df0['TYPE'] == 'DRE')]
        
     def add_cat(df=''):
