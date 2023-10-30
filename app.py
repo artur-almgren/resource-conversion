@@ -7,7 +7,13 @@ from PIL import Image
 
 
 #import plotly.graph_objects as go
-from streamlit_option_menu import option_menu
+try:
+    from streamlit_option_menu import option_menu
+except ImportError:
+    print("Module streamlit_option_menu not installed")
+    !pip install streamlit_option_menu
+
+
 #from gtspython import tonGrad
 st.set_page_config(layout="wide")
 default_directory_path = r"C:\Users\AAlmgren\Documents\Projects\Drilling Compliance\csv"
