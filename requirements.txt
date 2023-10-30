@@ -6,5 +6,5 @@ streamlit
 cmath
 os
 PIL
-streamlit_option_menu import option_menu
+option_menu
 streamlit_option_menu
