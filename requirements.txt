@@ -5,6 +5,3 @@ pydeck
 streamlit
 cmath
 os
-PIL
-option_menu
-streamlit_option_menu
