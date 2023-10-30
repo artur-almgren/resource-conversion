@@ -472,7 +472,7 @@ with tab6:
             
 with tab7:
 
-    # Sample data
+    # # Sample data
     data = {
         'Category': ['Start', 'Category A', 'Category B', 'Category C', 'End'],
         'Value': [100, -20, -30, 40, -10]
@@ -501,9 +501,9 @@ with tab7:
     # Customize the chart
     fig.update_layout(title="Waterfall Chart", showlegend=False)
 
-    # Display the waterfall chart
-    st.write("Waterfall Chart:")
-    st.plotly_chart(fig)
+    # # Display the waterfall chart
+    # st.write("Waterfall Chart:")
+    # st.plotly_chart(fig)
 
 with tab8:
 
