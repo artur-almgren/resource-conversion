@@ -10,7 +10,7 @@ from PIL import Image
 
 #from gtspython import tonGrad
 st.set_page_config(layout="wide")
-default_directory_path = r"C:\Users\AAlmgren\Documents\Projects\Drilling Compliance\csv"
+default_directory_path = r"./"
 directory_path = st.text_input("Type folder:", default_directory_path)
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Resumed","Conversion", "Detailed Conversion","Conversion by vein","DDH detail","New structures", "Waterfall", "Res Table"])
