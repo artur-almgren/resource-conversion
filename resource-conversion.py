@@ -452,10 +452,10 @@ with tab6:
         imagenns = [x for x in Path(workpath).iterdir() if x in fils]
 
         for filebm in fils:
-        #     tonGrad(fname=filebm,grades = ['ZN','AG','PB','CU'],
-        #     dens='DENSITY',cogvar='ZNEQ',ton='TON',
-        #     unit=1,blksizcol=['XINC','YINC','ZINC'],minedfi='MINED',minedva=1,
-        #     initcog=0,maxcog=10,ncogs=20,calcton=True,root=workpath)
+            tonGrad(fname=filebm,grades = ['ZN','AG','PB','CU'],
+            dens='DENSITY',cogvar='ZNEQ',ton='TON',
+            unit=1,blksizcol=['XINC','YINC','ZINC'],minedfi='MINED',minedva=1,
+            initcog=0,maxcog=10,ncogs=20,calcton=True,root=workpath)
         
             image_files_gt = [f for f in os.listdir(gt_path)]
                 # Exibindo imagens da pasta usando a navegação por setas do teclado
