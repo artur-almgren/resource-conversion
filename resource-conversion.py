@@ -489,15 +489,15 @@ with tab7:
     st.write("Original Data:")
     st.dataframe(df)
 
-    # Create a waterfall chart
-    # fig = go.Figure(go.Waterfall(
-    #     name="",
-    #     orientation="v",
-    #     textposition="outside",
-    #     text=df['Value'],
-    #     x=df['Category'],
-    #     y=df['Value']
-    # ))
+    Create a waterfall chart
+    fig = go.Figure(go.Waterfall(
+        name="",
+        orientation="v",
+        textposition="outside",
+        text=df['Value'],
+        x=df['Category'],
+        y=df['Value']
+    ))
 
     # Customize the chart
    # fig.update_layout(title="Waterfall Chart", showlegend=False)
