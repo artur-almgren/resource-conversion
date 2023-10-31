@@ -489,7 +489,7 @@ with tab7:
     st.write("Original Data:")
     st.dataframe(df)
 
-    Create a waterfall chart
+    #Create a waterfall chart
     fig = go.Figure(go.Waterfall(
         name="",
         orientation="v",
