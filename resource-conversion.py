@@ -4,7 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 from PIL import Image
-import plotly.graph_objects as go
+import plotly
 
 #from streamlit_option_menu import option_menu
 
@@ -489,8 +489,8 @@ with tab7:
     st.write("Original Data:")
     st.dataframe(df)
 
-    #Create a waterfall chart
-    fig = go.Figure(go.Waterfall(
+    #Create a waterfall chart .graph_objects as go
+    fig = plotly.Figure(plotly.Waterfall(
         name="",
         orientation="v",
         textposition="outside",
