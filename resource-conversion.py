@@ -4,8 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 from PIL import Image
-import plotly as go
-#import plotly.graph_objects as go
+import plotly.graph_objects as go
 
 from streamlit_option_menu import option_menu
 
