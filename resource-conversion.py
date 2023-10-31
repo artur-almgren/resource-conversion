@@ -4,7 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 from PIL import Image
-#import plotly.graph_objects as go
+import plotly.graph_objects as go
 
 #from streamlit_option_menu import option_menu
 
@@ -541,3 +541,37 @@ with tab8:
     st.write('YE 2023 Resources Table')
     st.dataframe(x82, hide_index=True)
 
+with tab8:
+
+    if selected_mined_a:
+        df_rescat = df_rescat[df_rescat["MINED_A"].isin([selected_mined_a])]
+    if selected_cutoff_a:
+        df_rescat = df_rescat[df_rescat["CUTOFF"].isin([selected_cutoff_a])]
+    if selected_buffer:
+        df_rescat = df_rescat[df_rescat["BUFFER"].isin([selected_buffer])]
+    if selected_domain:
+        df_rescat = df_rescat[df_rescat["VEIN"].isin(selected_domain)]
+
+    def build_table_rescat(df=df,phase='Before Drilling'):
+        #Create two columns: afer drilling and before drilling
+        x1 = df[df['PHASE'] == phase]
+        df_grade=(x1.groupby('RE')[my_list+[material.upper()]]
+                         .apply(lambda x: x[my_list].mul(x[material.upper()], axis=0).sum() / x[material.upper()].sum()))
+        df5 = pd.DataFrame()
+        df4=x1.groupby(['RE']).sum()
+        df5[material+' (Mt)']=df4[material.upper()]
+        df5.index.rename('index', inplace=True)
+        df_grade.index.rename('index', inplace=True)
+        #if df5.shape[0]>0:
+        df6=pd.merge(df5,df_grade,on='index',how='left')
+        df6.loc[(df6[material+' (Mt)'] >0) , material+' (Mt)'] = df6[material+' (Mt)'] / 1000000
+        df6 = df6.round(1)  # Round all columns to 1 decimal place
+        return df6
+
+
+    x81=build_table_rescat(df=df_rescat,phase='Before Drilling')dd
+    st.write('YE 2022 Resources Table')
+    st.dataframe(x81, hide_index=True)
+    x82=build_table_rescat(df=df_rescat,phase='After Drilling')
+    st.write('YE 2023 Resources Table')
+    st.dataframe(x82, hide_index=True)
