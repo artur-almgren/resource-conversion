@@ -1,6 +1,6 @@
 altair
 pydeck
-streamlit==0.80.0
+streamlit
 pandas
 numpy
-plotly==4.14.3
+plotly
