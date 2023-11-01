@@ -488,7 +488,7 @@ with tab7:
     st.dataframe(df)
 
     #Create a waterfall chart .graph_objects as go
-    fig = plotly.Figure(plotly.Waterfall(
+    fig = go.Figure(go.Waterfall(
         name="",
         orientation="v",
         textposition="outside",
@@ -498,11 +498,12 @@ with tab7:
     ))
 
     # Customize the chart
-   # fig.update_layout(title="Waterfall Chart", showlegend=False)
+    fig.update_layout(title="Waterfall Chart", showlegend=False)
 
-    # # Display the waterfall chart
-    # st.write("Waterfall Chart:")
-    # st.plotly_chart(fig)
+     # Display the waterfall chart
+    st.write("Waterfall Chart:")
+
+    st.plotly_chart(fig)
 
 with tab8:
 
