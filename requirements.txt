@@ -4,3 +4,6 @@ streamlit
 pandas
 numpy
 plotly
+matplotlib
+opencv-python-headless
+scikit-learn
